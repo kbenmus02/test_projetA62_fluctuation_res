@@ -30,6 +30,8 @@ jobs:
         run: |
           echo "# Metriques:" > report.md
           echo "# Matrice de Confusion:" > report2.md
+          cat report.md
+          cat report2.md
 
           jupyter nbconvert --to notebook --execute notebook/iteration_4_generate_model_cnn.ipynb
           
@@ -39,6 +41,8 @@ jobs:
           echo "   " >> report.md
           cat report2.md >> report.md          
           ls -lrt
+          cat report.md
+          
 
       - name: send model to remote storage
         env:
