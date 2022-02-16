@@ -53,7 +53,7 @@ jobs:
           git config --local user.email "$GITHUB_EMAIL"
           git config --local user.name "$GITHUB_USERNAME"
           #git add requirements_docker.txt python_version.txt report.md #Pour avoir les versions des librairies dans Ubuntu.
-          git add report.md model.dvc
+          git add report.md model.dvc notebook/iteration_4_generate_model_cnn.ipynb
 
           echo $(date +%Z)
           git commit --allow-empty -m "push model.dvc and report at $(date +%d-%b-%H_%M)"
